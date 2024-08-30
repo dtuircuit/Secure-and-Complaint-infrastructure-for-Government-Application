@@ -1,11 +1,12 @@
-#VPC ID (for referencing existing VPCs)
-variable "vpc_id" {
-  description = "The ID of he VPC to asscociate with subnets and other resources"
+# VPC Configuration
+variable "vpc_cidr" {
+  description = "CIDR block for the VPC"
   type        = string
+  default     = "10.0.0.0/16"
 }
 
-#VPC CIDR Block
-variable "vpc_cidr_block" {
-  description = "The CIDR block for the VPC"
-  default     = "10.0.0.0/16"
+variable "region" {
+  description = "AWS Region"
+  type        = string
+  default     = "us-east-2"
 }
